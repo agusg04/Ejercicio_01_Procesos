@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"frecuencia"},{"l":"generador"},{"l":"lanzador"}];updateSearchResults();

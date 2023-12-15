@@ -1,0 +1,7 @@
+Para pasar parametros por medio de tuberías, deben ir en "X"
+--java -jar programaEmisor.jar "X" | java -jar programaEmisor-jar--
+El programa emisor debe leer por medio de Scanner o BufferReader y InputStreamReader opcional.
+Para lanzar varias instancias usamos ProcessBuilder y .start() o Process y Runtime.exec()
+Llamaremos solo a lanzador ya que java -jar lanzador.jar 10 10 | java -jar generador.jar | java 
+-jar frecuencia.jar, no es correcto y no funcionara ya que lanzador.jar no tiene output solo lanza procesos. No podemos pasar un proceso como parametro un proceso de ese .jar a través de tuberías.
+Si quires mostrar la la salida (inputStream) de una salida (outputStream), se puede. Primero cuando lanzamos los procesos no es tan importante se suelen lanzar uno detras de otro al principio. Después dado esto a mi lo que hacia era recogerme la ultima cadena que salia de frecuencia, por tanto tal como se introduzca la salida de generador en la entrada de frecuencia se lee. Asi podremos leer todas las cadenas procesadas por frecuencia.  
